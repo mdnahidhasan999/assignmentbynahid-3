@@ -1,5 +1,4 @@
 <?php
-// Function to generate a random password
 function generatePassword($length) {
     $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';
     $password = '';
@@ -13,7 +12,6 @@ function generatePassword($length) {
     return $password;
 }
 
-// Generate a password with a length of 12 characters
 $pass = generatePassword(12);
 echo "Generated Password: " . $pass;
 

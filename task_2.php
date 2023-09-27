@@ -1,13 +1,11 @@
 <?php
-$numbers = range(1, 10);
-function removeEven($arr){
-    $res = array();
-    foreach ($arr as $value) {
-        if ($value % 2 !=0) {
-            $res[] = $value;
-        }
-    }
-    return $res;
+$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeNumbers($numbers) {
+    $filNumbers = array_filter($numbers, function($value) {
+        return $value % 2 != 0;
+    });
+
+    print_r($filNumbers);
 }
-$removeEvenNUM = removeEven($numbers);
-print_r($removeEvenNUM);
+removeNumbers($numbers);
+
